@@ -1,0 +1,286 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar {
+  border-radius: 0px;
+}
+
+.glyphicon {
+  font-size: 15px;
+}
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+  white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+  max-width: 280px;
+}
+
+/*#region Blog*/
+.blogContainer {
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.mainblogview hr {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.mainblogbar {
+  width: 29%;
+  min-height: 500px;
+  float: right;
+}
+
+  .mainblogbar .blogControlPanel {
+    background-color: rgba(255, 255, 255, 0.50);
+    border: solid #750000 0.5px;
+    -moz-box-shadow: 0 1px 4px #999;
+    -webkit-box-shadow: 0 1px 4px #999;
+    box-shadow: 0 1px 4px #999;
+    width: 99%;
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+
+    .mainblogbar .blogControlPanel .blogCtrlTable {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+      .mainblogbar .blogControlPanel .blogCtrlTable td {
+        padding: 1px 5px;
+      }
+
+      .mainblogbar .blogControlPanel .blogCtrlTable .blgCtrlPnl {
+        text-decoration: none;
+        color: blue;
+        font-size: 14px;
+      }
+
+  .mainblogbar .adminBlogCtrl {
+    background-color: rgba(255, 255, 255, 0.50);
+    border: solid #750000 0.5px;
+    -moz-box-shadow: 0 1px 4px #999;
+    -webkit-box-shadow: 0 1px 4px #999;
+    box-shadow: 0 1px 4px #999;
+    width: 99%;
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+
+    .mainblogbar .adminBlogCtrl table {
+      margin: 10px;
+    }
+
+      .mainblogbar .adminBlogCtrl table td a {
+        text-decoration: none;
+        color: blue;
+      }
+
+/*#endregion Blog*/
+
+/*#region Posts*/
+
+.postDescContainer {
+  border: solid 0.5px;
+  background-color: rgba(255, 255, 255, 0.50);
+  border-radius: 10px;
+  width: 800px;
+  margin: 10px auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
+  .postDescContainer a {
+    text-decoration: none;
+    color: blue;
+    width: 80%;
+  }
+
+  .postDescContainer .postDescTitle {
+    width: 80%;
+  }
+
+    .postDescContainer .postDescTitle h3 {
+      margin: 5px 0;
+    }
+
+  .postDescContainer .postPubDate {
+    font-style: italic;
+    color: #5f80ff;
+    margin: 5px 0;
+    float: right;
+  }
+
+  .postDescContainer .postDescCategory {
+    display: inline-block;
+    margin: 5px 0;
+  }
+
+    .postDescContainer .postDescCategory .postDescCatNames {
+      float: left;
+    }
+
+    .postDescContainer .postDescCategory label {
+      float: left;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+  .postDescContainer .postDescBody {
+    margin-bottom: 10px;
+  }
+
+  .postDescContainer .postVidCont {
+    float: right;
+    width: 200px;
+  }
+
+  .postDescContainer .postVidThumb {
+    width: 200px;
+    height: 50px;
+  }
+
+    .postDescContainer .postVidThumb img {
+      margin-bottom: 5px;
+    }
+
+.mainblogview .paging {
+  position: absolute;
+  bottom: 0;
+}
+
+.mainblogview #spacer {
+  width: 100%;
+  height: 50px;
+  float: left;
+  display: inline-block;
+}
+
+.mainblogview .pagination-container {
+  margin-left: 20px;
+}
+
+.mainblogview .pagenum {
+  margin-left: 20px;
+}
+/*#endregion Posts*/
+
+/*#region Allposts*/
+.postsTable {
+  background-color: rgba(255, 255, 255, 0.50);
+  -moz-box-shadow: 0 1px 4px #999;
+  -webkit-box-shadow: 0 1px 4px #999;
+  box-shadow: 0 1px 4px #999;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+  .postsTable a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .postsTable th {
+    border: solid #750000 0.5px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .postsTable td {
+    padding: 5px;
+    border: solid #750000 0.5px;
+  }
+
+  .postsTable .tableTitle {
+    width: 200px;
+  }
+
+/*#endregion Allposts*/
+
+/*#region Post*/
+.postContainer {
+  background-color: rgba(255, 255, 255, 0.70);
+  border-radius: 10px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
+  .postContainer .postHeader {
+    overflow: hidden;
+  }
+
+  .postContainer a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .postContainer .postTitle {
+    text-align: center;
+  }
+
+  .postContainer .postBody {
+    width: 90%;
+    margin: 10px auto;
+    position: relative;
+    padding: 10px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+    .postContainer .postBody pre, .commentBody pre {
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #750000;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+  .postContainer .postBody {
+    width: 90%;
+    margin: 10px auto;
+    position: relative;
+    padding: 10px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+    .postContainer .postBody pre, .commentBody pre {
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #750000;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+input[type=text] {
+  width: 160px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+  input[type=text]:focus {
+    width: 100%;
+  }
+

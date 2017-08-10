@@ -1,0 +1,61 @@
+﻿<script src="../../../Scripts/bootstrap.js"></script>
+<script src="../../../Scripts/jquery-1.10.2.js"></script>
+<div class='panel panel-primary'>
+  <div class='panel-heading'>
+   Manage Tags
+  </div>
+  <div class='panel-body'>
+    <div class='table'>
+      <div style="padding-bottom:10px"><button class="btn btn-primary" (click)="addTag()">Add</button></div>
+      <div *ngIf='tags && tags.length==0' class="alert alert-info" role="alert">No record found!</div>
+      <table class='table table-striped' *ngIf='tags && tags.length'>
+        <thead>
+          <tr>
+            <th>Tag Name</th>          
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tag of tags">
+            <td>{{tag.tag_name}}</td>
+            <td>
+              <button title="Edit" class="btn btn-primary" (click)="editTag(tag.tag_id)">Edit</button>
+              <button title="Delete" class="btn btn-danger" (click)="deleteTag(tag.tag_id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+      </div>
+    </div>
+    <div *ngIf="msg" role="alert" class="alert alert-info alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      <span class="sr-only">Error:</span>
+      {{msg}}
+    </div>
+  </div>
+</div>
+
+<modal #modal>
+  <form novalidate (ngSubmit)="onSubmit(tagFrm)" [formGroup]="tagFrm">
+    <modal-header [show-close]="true">
+      <h4 class="modal-title">{{modalTitle}}</h4>
+    </modal-header>
+    <modal-body>
+
+      <div class="form-group">
+        <div>
+          <span>Tag Name*</span>
+          <input type="text" class="form-control" placeholder="Tag Name" formControlName="Tag Name">
+        </div>
+      </div>
+    </modal-body>
+    <modal-footer>
+      <div>
+        <a class="btn btn-default" (click)="modal.dismiss()">Cancel</a>
+        <button type="submit" [disabled]="tagFrm.invalid" class="btn btn-primary">{{modalBtnTitle}}</button>
+      </div>
+    </modal-footer>
+  </form>
+</modal>
